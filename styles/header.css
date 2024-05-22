@@ -25,7 +25,24 @@
     font-weight: 500;
     color: var(--co-black);
     white-space: nowrap;
+    position: relative;
 }
+
+.header__nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -10px;
+    height: 1px;
+    background-color: var(--co-green);
+    transition: right .22s;
+}
+
+.header__nav-link:hover::after {
+    right: 0;
+}
+
 
 .header__nav-link:hover {
     color: var(--co-green);
