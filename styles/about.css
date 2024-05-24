@@ -1,0 +1,96 @@
+.about {
+    padding: 160px 0 60px;
+    background-color: var(--co-white);
+}
+
+/* .about__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--co-black);
+} */
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__title {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--co-green);
+    max-width: 500px;
+}
+
+.about__title::before {
+    content: "How it works";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--co-black);
+}
+
+.about__descr {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 670px;
+}
+
+.about__cards {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+}
+
+.about__cards .card:nth-child(2) {
+    margin-top: 210px;
+}
+
+.about__cards .card:nth-child(3) {
+    padding-bottom: 27px;
+}
+
+@media (max-width: 1230px) {
+    /* .about__subtitle {
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+    } */
+    .about__content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start; 
+        gap: 20px;
+    }
+    .about__cards {
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+    }
+    .about__cards .card:nth-child(2) {
+        margin-top: 0;
+    }
+    
+    .about__cards .card:nth-child(3) {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .about__title {
+        font-size: 35px;
+    }
+    .about__content {
+        padding: 0 15px;
+    }
+    .about__descr {
+        font-size: 16px;
+    }
+}
